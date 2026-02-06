@@ -6,28 +6,28 @@ const router = express.Router();
 
 // index 
 router.get('/', function (req, res) {
-    res.send('Lista delle pizze');
+    res.send('Lista dei posts');
 });
 
 // show 
 router.get('/:id', function (req, res) {
-    res.send('Dettagli della pizza ' + req.params.id);
+    res.send('Dettagli del post ' + req.params.id);
 });
 
 // create
 router.post('/', function (req, res) {
-    res.send('Creazione nuova pizza');
+    res.send('Creazione nuovo post');
 });
 
 //update
 router.put('/:id', function (req, res) {
-    res.send('Modificare la pizza ' + req.params.id);
+    res.send('Modificare il post ' + req.params.id);
 });
 
 
 //destroy
 router.delete('/:id', function (req, res) {
-    res.send('Distruggere la pizza ' + req.params.id);
+    res.send('Distruggere il post ' + req.params.id);
 });
 
 
