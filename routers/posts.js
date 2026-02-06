@@ -14,9 +14,21 @@ router.get('/:id', function (req, res) {
     res.send('Dettagli della pizza ' + req.params.id);
 });
 
-// store
+// create
 router.post('/', function (req, res) {
     res.send('Creazione nuova pizza');
 });
+
+//update
+router.put('/:id', function (req, res) {
+    res.send('Modificare la pizza ' + req.params.id);
+});
+
+
+//destroy
+router.delete('/:id', function (req, res) {
+    res.send('Distruggere la pizza ' + req.params.id);
+});
+
 
 module.exports = router;
