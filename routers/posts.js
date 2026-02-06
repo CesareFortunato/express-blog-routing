@@ -1,6 +1,6 @@
 //variabile express
 const express = require('express');
-const posts = require('../data/posts');
+const posts = require('../data/posts')
 
 //variabile router
 const router = express.Router();
@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
 
 // show 
 router.get('/:id', function (req, res) {
-    res.json(posts.id)
+    res.json(posts[req.params.id])
 });
 
 // create
