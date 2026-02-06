@@ -1,5 +1,6 @@
 //variabile express
 const express = require('express');
+const posts = require('../data/posts');
 
 //variabile router
 const router = express.Router();
@@ -11,7 +12,7 @@ router.get('/', function (req, res) {
 
 // show 
 router.get('/:id', function (req, res) {
-    res.send('Dettagli del post ' + req.params.id);
+    res.json(posts.id)
 });
 
 // create

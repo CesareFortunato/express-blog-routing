@@ -5,11 +5,15 @@ const port = 3000;
 //importo router
 const postsRouter = require ('./routers/posts');
 
+//importo i posts
+const posts = require('./data/posts');
+
 app.use(express.static('public'));
-app.use("./posts", postsRouter)
+
+app.use("/posts", postsRouter)
 
 app.get('/', (req, res) => {
-    res.send('<h1>Home del blog<h1/>')
+    res.json(posts)
     
 })
 
